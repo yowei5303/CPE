@@ -23,6 +23,11 @@ out = ""
 for i in range(T) :
     str = input()
     out = ""
+    for j in range(9):
+        num = str.count(chr(48+j))
+        if (Isprime(num)):
+            #print("case ",i+1,":",chr(48+j))
+            out += chr(48+j)
     for j in range(26):
         capital = str.count(chr(65+j))
         if (Isprime(capital)):
@@ -33,11 +38,6 @@ for i in range(T) :
         if (Isprime(lower)):
             #print("case ",i+1,":",chr(97+j))
             out += chr(97+j)
-    for j in range(9):
-        num = str.count(chr(48+j))
-        if (Isprime(num)):
-            #print("case ",i+1,":",chr(48+j))
-            out += chr(48+j)
     if len(out) == 0 :
         print("case ",i+1,":","empty")
     else:
